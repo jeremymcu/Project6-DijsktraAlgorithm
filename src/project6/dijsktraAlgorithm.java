@@ -4,11 +4,11 @@ public class dijsktraAlgorithm {
     int len;
     int[] distance = new int[len];
 
-    int minimum(boolean[] visit){
+    int minimum(boolean[] visit) {
         int min = Integer.MAX_VALUE;
         int min_index = 0;
-        for (int i=0; i<len; i+=1){
-            if(visit[i] == false && distance[i]<min){
+        for (int i = 0; i < len; i += 1) {
+            if (visit[i] == false && distance[i] < min) {
                 min = distance[i];
                 min_index = i;
             }
@@ -31,6 +31,7 @@ public class dijsktraAlgorithm {
 
         for (int i=0; i<len; i+=1){
             int now = minimum(visit);
+
             visit[now] = true;
 
             for (int j=0; j < len; j++){
